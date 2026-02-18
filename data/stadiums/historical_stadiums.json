@@ -1,0 +1,208 @@
+{
+  "stadiums": {
+    "polo_grounds": {
+      "name": "Polo Grounds",
+      "city": "New York",
+      "team": "NYG",
+      "years_active": "1911-1957",
+      "foul_territory": "small",
+      "dimensions": {
+        "left_field_line": 279,
+        "left_center": 455,
+        "center_field": 483,
+        "right_center": 449,
+        "right_field_line": 257,
+        "left_field_wall_height": 17,
+        "center_field_wall_height": 12,
+        "right_field_wall_height": 11
+      }
+    },
+    "ebbets_field": {
+      "name": "Ebbets Field",
+      "city": "Brooklyn",
+      "team": "BRO",
+      "years_active": "1913-1957",
+      "foul_territory": "small",
+      "dimensions": {
+        "left_field_line": 348,
+        "left_center": 351,
+        "center_field": 393,
+        "right_center": 352,
+        "right_field_line": 297,
+        "left_field_wall_height": 10,
+        "center_field_wall_height": 10,
+        "right_field_wall_height": 19
+      }
+    },
+    "old_yankee_stadium": {
+      "name": "Original Yankee Stadium",
+      "city": "New York",
+      "team": "NYY",
+      "years_active": "1923-2008",
+      "foul_territory": "small",
+      "dimensions": {
+        "left_field_line": 318,
+        "left_center": 399,
+        "center_field": 408,
+        "right_center": 385,
+        "right_field_line": 314,
+        "left_field_wall_height": 8,
+        "center_field_wall_height": 8,
+        "right_field_wall_height": 10
+      }
+    },
+    "tiger_stadium": {
+      "name": "Tiger Stadium",
+      "city": "Detroit",
+      "team": "DET",
+      "years_active": "1912-1999",
+      "foul_territory": "small",
+      "dimensions": {
+        "left_field_line": 340,
+        "left_center": 365,
+        "center_field": 440,
+        "right_center": 325,
+        "right_field_line": 325,
+        "left_field_wall_height": 11,
+        "center_field_wall_height": 11,
+        "right_field_wall_height": 11
+      }
+    },
+    "forbes_field": {
+      "name": "Forbes Field",
+      "city": "Pittsburgh",
+      "team": "PIT",
+      "years_active": "1909-1970",
+      "foul_territory": "large",
+      "dimensions": {
+        "left_field_line": 365,
+        "left_center": 406,
+        "center_field": 435,
+        "right_center": 375,
+        "right_field_line": 300,
+        "left_field_wall_height": 12,
+        "center_field_wall_height": 12,
+        "right_field_wall_height": 12
+      }
+    },
+    "crosley_field": {
+      "name": "Crosley Field",
+      "city": "Cincinnati",
+      "team": "CIN",
+      "years_active": "1912-1970",
+      "foul_territory": "average",
+      "dimensions": {
+        "left_field_line": 328,
+        "left_center": 380,
+        "center_field": 387,
+        "right_center": 325,
+        "right_field_line": 325,
+        "left_field_wall_height": 12,
+        "center_field_wall_height": 12,
+        "right_field_wall_height": 12
+      }
+    },
+    "sportsmans_park": {
+      "name": "Sportsman's Park",
+      "city": "St. Louis",
+      "team": "STL",
+      "years_active": "1909-1966",
+      "foul_territory": "average",
+      "dimensions": {
+        "left_field_line": 351,
+        "left_center": 379,
+        "center_field": 420,
+        "right_center": 354,
+        "right_field_line": 310,
+        "left_field_wall_height": 11,
+        "center_field_wall_height": 11,
+        "right_field_wall_height": 11
+      }
+    },
+    "griffith_stadium": {
+      "name": "Griffith Stadium",
+      "city": "Washington",
+      "team": "WAS",
+      "years_active": "1911-1961",
+      "foul_territory": "large",
+      "dimensions": {
+        "left_field_line": 388,
+        "left_center": 391,
+        "center_field": 421,
+        "right_center": 378,
+        "right_field_line": 320,
+        "left_field_wall_height": 30,
+        "center_field_wall_height": 30,
+        "right_field_wall_height": 30
+      }
+    },
+    "shibe_park": {
+      "name": "Shibe Park / Connie Mack Stadium",
+      "city": "Philadelphia",
+      "team": "PHA",
+      "years_active": "1909-1970",
+      "foul_territory": "average",
+      "dimensions": {
+        "left_field_line": 334,
+        "left_center": 378,
+        "center_field": 447,
+        "right_center": 329,
+        "right_field_line": 329,
+        "left_field_wall_height": 12,
+        "center_field_wall_height": 12,
+        "right_field_wall_height": 12
+      }
+    },
+    "comiskey_park": {
+      "name": "Original Comiskey Park",
+      "city": "Chicago",
+      "team": "CWS",
+      "years_active": "1910-1990",
+      "foul_territory": "large",
+      "dimensions": {
+        "left_field_line": 352,
+        "left_center": 382,
+        "center_field": 420,
+        "right_center": 382,
+        "right_field_line": 352,
+        "left_field_wall_height": 8,
+        "center_field_wall_height": 8,
+        "right_field_wall_height": 8
+      }
+    },
+    "braves_field": {
+      "name": "Braves Field",
+      "city": "Boston",
+      "team": "BSN",
+      "years_active": "1915-1952",
+      "foul_territory": "large",
+      "dimensions": {
+        "left_field_line": 402,
+        "left_center": 402,
+        "center_field": 550,
+        "right_center": 402,
+        "right_field_line": 402,
+        "left_field_wall_height": 10,
+        "center_field_wall_height": 10,
+        "right_field_wall_height": 10
+      }
+    },
+    "municipal_stadium": {
+      "name": "Cleveland Municipal Stadium",
+      "city": "Cleveland",
+      "team": "CLE",
+      "years_active": "1932-1993",
+      "foul_territory": "very_large",
+      "dimensions": {
+        "left_field_line": 320,
+        "left_center": 380,
+        "center_field": 400,
+        "right_center": 380,
+        "right_field_line": 320,
+        "left_field_wall_height": 8,
+        "center_field_wall_height": 8,
+        "right_field_wall_height": 8
+      }
+    }
+  }
+}

@@ -1,0 +1,484 @@
+{
+  "stadiums": {
+    "angel_stadium": {
+      "name": "Angel Stadium",
+      "city": "Anaheim",
+      "team": "LAA",
+      "foul_territory": "average",
+      "dimensions": {
+        "left_field_line": 330,
+        "left_center": 387,
+        "center_field": 400,
+        "right_center": 365,
+        "right_field_line": 330,
+        "left_field_wall_height": 18,
+        "center_field_wall_height": 18,
+        "right_field_wall_height": 18
+      }
+    },
+    "minute_maid_park": {
+      "name": "Minute Maid Park",
+      "city": "Houston",
+      "team": "HOU",
+      "foul_territory": "small",
+      "dimensions": {
+        "left_field_line": 315,
+        "left_center": 436,
+        "center_field": 409,
+        "right_center": 373,
+        "right_field_line": 325,
+        "left_field_wall_height": 19,
+        "center_field_wall_height": 12,
+        "right_field_wall_height": 7
+      }
+    },
+    "oriole_park": {
+      "name": "Oriole Park at Camden Yards",
+      "city": "Baltimore",
+      "team": "BAL",
+      "foul_territory": "small",
+      "dimensions": {
+        "left_field_line": 333,
+        "left_center": 384,
+        "center_field": 400,
+        "right_center": 373,
+        "right_field_line": 318,
+        "left_field_wall_height": 25,
+        "center_field_wall_height": 25,
+        "right_field_wall_height": 25
+      }
+    },
+    "fenway_park": {
+      "name": "Fenway Park",
+      "city": "Boston",
+      "team": "BOS",
+      "foul_territory": "small",
+      "dimensions": {
+        "left_field_line": 310,
+        "left_center": 379,
+        "center_field": 420,
+        "right_center": 380,
+        "right_field_line": 302,
+        "left_field_wall_height": 37,
+        "center_field_wall_height": 17,
+        "right_field_wall_height": 3
+      }
+    },
+    "guaranteed_rate_field": {
+      "name": "Guaranteed Rate Field",
+      "city": "Chicago",
+      "team": "CWS",
+      "foul_territory": "average",
+      "dimensions": {
+        "left_field_line": 330,
+        "left_center": 375,
+        "center_field": 400,
+        "right_center": 375,
+        "right_field_line": 335,
+        "left_field_wall_height": 8,
+        "center_field_wall_height": 8,
+        "right_field_wall_height": 8
+      }
+    },
+    "progressive_field": {
+      "name": "Progressive Field",
+      "city": "Cleveland",
+      "team": "CLE",
+      "foul_territory": "average",
+      "dimensions": {
+        "left_field_line": 325,
+        "left_center": 370,
+        "center_field": 405,
+        "right_center": 375,
+        "right_field_line": 325,
+        "left_field_wall_height": 19,
+        "center_field_wall_height": 19,
+        "right_field_wall_height": 19
+      }
+    },
+    "comerica_park": {
+      "name": "Comerica Park",
+      "city": "Detroit",
+      "team": "DET",
+      "foul_territory": "large",
+      "dimensions": {
+        "left_field_line": 345,
+        "left_center": 395,
+        "center_field": 420,
+        "right_center": 365,
+        "right_field_line": 330,
+        "left_field_wall_height": 8,
+        "center_field_wall_height": 8,
+        "right_field_wall_height": 8
+      }
+    },
+    "kauffman_stadium": {
+      "name": "Kauffman Stadium",
+      "city": "Kansas City",
+      "team": "KC",
+      "foul_territory": "large",
+      "dimensions": {
+        "left_field_line": 330,
+        "left_center": 387,
+        "center_field": 410,
+        "right_center": 387,
+        "right_field_line": 330,
+        "left_field_wall_height": 12,
+        "center_field_wall_height": 12,
+        "right_field_wall_height": 9
+      }
+    },
+    "target_field": {
+      "name": "Target Field",
+      "city": "Minneapolis",
+      "team": "MIN",
+      "foul_territory": "average",
+      "dimensions": {
+        "left_field_line": 339,
+        "left_center": 377,
+        "center_field": 404,
+        "right_center": 367,
+        "right_field_line": 328,
+        "left_field_wall_height": 8,
+        "center_field_wall_height": 8,
+        "right_field_wall_height": 8
+      }
+    },
+    "yankee_stadium": {
+      "name": "Yankee Stadium",
+      "city": "New York",
+      "team": "NYY",
+      "foul_territory": "small",
+      "dimensions": {
+        "left_field_line": 318,
+        "left_center": 399,
+        "center_field": 408,
+        "right_center": 353,
+        "right_field_line": 314,
+        "left_field_wall_height": 8,
+        "center_field_wall_height": 8,
+        "right_field_wall_height": 10
+      }
+    },
+    "oakland_coliseum": {
+      "name": "Oakland-Alameda County Coliseum",
+      "city": "Oakland",
+      "team": "OAK",
+      "foul_territory": "very_large",
+      "dimensions": {
+        "left_field_line": 330,
+        "left_center": 388,
+        "center_field": 400,
+        "right_center": 388,
+        "right_field_line": 330,
+        "left_field_wall_height": 8,
+        "center_field_wall_height": 8,
+        "right_field_wall_height": 8
+      }
+    },
+    "t_mobile_park": {
+      "name": "T-Mobile Park",
+      "city": "Seattle",
+      "team": "SEA",
+      "foul_territory": "average",
+      "dimensions": {
+        "left_field_line": 331,
+        "left_center": 378,
+        "center_field": 401,
+        "right_center": 326,
+        "right_field_line": 326,
+        "left_field_wall_height": 8,
+        "center_field_wall_height": 8,
+        "right_field_wall_height": 8
+      }
+    },
+    "globe_life_field": {
+      "name": "Globe Life Field",
+      "city": "Arlington",
+      "team": "TEX",
+      "foul_territory": "average",
+      "dimensions": {
+        "left_field_line": 329,
+        "left_center": 372,
+        "center_field": 407,
+        "right_center": 374,
+        "right_field_line": 326,
+        "left_field_wall_height": 8,
+        "center_field_wall_height": 8,
+        "right_field_wall_height": 12
+      }
+    },
+    "rogers_centre": {
+      "name": "Rogers Centre",
+      "city": "Toronto",
+      "team": "TOR",
+      "foul_territory": "average",
+      "dimensions": {
+        "left_field_line": 328,
+        "left_center": 375,
+        "center_field": 400,
+        "right_center": 375,
+        "right_field_line": 328,
+        "left_field_wall_height": 10,
+        "center_field_wall_height": 10,
+        "right_field_wall_height": 10
+      }
+    },
+    "truist_park": {
+      "name": "Truist Park",
+      "city": "Atlanta",
+      "team": "ATL",
+      "foul_territory": "average",
+      "dimensions": {
+        "left_field_line": 335,
+        "left_center": 385,
+        "center_field": 400,
+        "right_center": 375,
+        "right_field_line": 325,
+        "left_field_wall_height": 8,
+        "center_field_wall_height": 8,
+        "right_field_wall_height": 8
+      }
+    },
+    "wrigley_field": {
+      "name": "Wrigley Field",
+      "city": "Chicago",
+      "team": "CHC",
+      "foul_territory": "small",
+      "dimensions": {
+        "left_field_line": 355,
+        "left_center": 368,
+        "center_field": 400,
+        "right_center": 353,
+        "right_field_line": 353,
+        "left_field_wall_height": 11,
+        "center_field_wall_height": 11,
+        "right_field_wall_height": 11
+      }
+    },
+    "great_american_ball_park": {
+      "name": "Great American Ball Park",
+      "city": "Cincinnati",
+      "team": "CIN",
+      "foul_territory": "small",
+      "dimensions": {
+        "left_field_line": 325,
+        "left_center": 379,
+        "center_field": 404,
+        "right_center": 370,
+        "right_field_line": 325,
+        "left_field_wall_height": 12,
+        "center_field_wall_height": 12,
+        "right_field_wall_height": 12
+      }
+    },
+    "coors_field": {
+      "name": "Coors Field",
+      "city": "Denver",
+      "team": "COL",
+      "foul_territory": "large",
+      "dimensions": {
+        "left_field_line": 347,
+        "left_center": 390,
+        "center_field": 415,
+        "right_center": 375,
+        "right_field_line": 350,
+        "left_field_wall_height": 8,
+        "center_field_wall_height": 8,
+        "right_field_wall_height": 8
+      }
+    },
+    "loanDepot_park": {
+      "name": "loanDepot park",
+      "city": "Miami",
+      "team": "MIA",
+      "foul_territory": "average",
+      "dimensions": {
+        "left_field_line": 344,
+        "left_center": 386,
+        "center_field": 407,
+        "right_center": 392,
+        "right_field_line": 335,
+        "left_field_wall_height": 8,
+        "center_field_wall_height": 8,
+        "right_field_wall_height": 8
+      }
+    },
+    "american_family_field": {
+      "name": "American Family Field",
+      "city": "Milwaukee",
+      "team": "MIL",
+      "foul_territory": "average",
+      "dimensions": {
+        "left_field_line": 344,
+        "left_center": 371,
+        "center_field": 400,
+        "right_center": 374,
+        "right_field_line": 345,
+        "left_field_wall_height": 8,
+        "center_field_wall_height": 8,
+        "right_field_wall_height": 8
+      }
+    },
+    "citi_field": {
+      "name": "Citi Field",
+      "city": "New York",
+      "team": "NYM",
+      "foul_territory": "average",
+      "dimensions": {
+        "left_field_line": 335,
+        "left_center": 378,
+        "center_field": 408,
+        "right_center": 373,
+        "right_field_line": 330,
+        "left_field_wall_height": 8,
+        "center_field_wall_height": 8,
+        "right_field_wall_height": 8
+      }
+    },
+    "citizens_bank_park": {
+      "name": "Citizens Bank Park",
+      "city": "Philadelphia",
+      "team": "PHI",
+      "foul_territory": "average",
+      "dimensions": {
+        "left_field_line": 329,
+        "left_center": 374,
+        "center_field": 401,
+        "right_center": 369,
+        "right_field_line": 330,
+        "left_field_wall_height": 8,
+        "center_field_wall_height": 8,
+        "right_field_wall_height": 8
+      }
+    },
+    "pnc_park": {
+      "name": "PNC Park",
+      "city": "Pittsburgh",
+      "team": "PIT",
+      "foul_territory": "average",
+      "dimensions": {
+        "left_field_line": 325,
+        "left_center": 389,
+        "center_field": 399,
+        "right_center": 375,
+        "right_field_line": 320,
+        "left_field_wall_height": 6,
+        "center_field_wall_height": 6,
+        "right_field_wall_height": 21
+      }
+    },
+    "busch_stadium": {
+      "name": "Busch Stadium",
+      "city": "St. Louis",
+      "team": "STL",
+      "foul_territory": "average",
+      "dimensions": {
+        "left_field_line": 336,
+        "left_center": 390,
+        "center_field": 400,
+        "right_center": 375,
+        "right_field_line": 335,
+        "left_field_wall_height": 8,
+        "center_field_wall_height": 8,
+        "right_field_wall_height": 8
+      }
+    },
+    "petco_park": {
+      "name": "Petco Park",
+      "city": "San Diego",
+      "team": "SD",
+      "foul_territory": "large",
+      "dimensions": {
+        "left_field_line": 336,
+        "left_center": 367,
+        "center_field": 396,
+        "right_center": 382,
+        "right_field_line": 322,
+        "left_field_wall_height": 8,
+        "center_field_wall_height": 8,
+        "right_field_wall_height": 8
+      }
+    },
+    "oracle_park": {
+      "name": "Oracle Park",
+      "city": "San Francisco",
+      "team": "SF",
+      "foul_territory": "large",
+      "dimensions": {
+        "left_field_line": 339,
+        "left_center": 364,
+        "center_field": 399,
+        "right_center": 421,
+        "right_field_line": 309,
+        "left_field_wall_height": 8,
+        "center_field_wall_height": 8,
+        "right_field_wall_height": 25
+      }
+    },
+    "nationals_park": {
+      "name": "Nationals Park",
+      "city": "Washington",
+      "team": "WAS",
+      "foul_territory": "average",
+      "dimensions": {
+        "left_field_line": 336,
+        "left_center": 377,
+        "center_field": 402,
+        "right_center": 370,
+        "right_field_line": 335,
+        "left_field_wall_height": 8,
+        "center_field_wall_height": 8,
+        "right_field_wall_height": 8
+      }
+    },
+    "tropicana_field": {
+      "name": "Tropicana Field",
+      "city": "St. Petersburg",
+      "team": "TB",
+      "foul_territory": "average",
+      "dimensions": {
+        "left_field_line": 315,
+        "left_center": 404,
+        "center_field": 404,
+        "right_center": 322,
+        "right_field_line": 322,
+        "left_field_wall_height": 10,
+        "center_field_wall_height": 10,
+        "right_field_wall_height": 10
+      }
+    },
+    "dodger_stadium": {
+      "name": "Dodger Stadium",
+      "city": "Los Angeles",
+      "team": "LAD",
+      "foul_territory": "large",
+      "dimensions": {
+        "left_field_line": 330,
+        "left_center": 385,
+        "center_field": 395,
+        "right_center": 385,
+        "right_field_line": 330,
+        "left_field_wall_height": 8,
+        "center_field_wall_height": 8,
+        "right_field_wall_height": 8
+      }
+    },
+    "chase_field": {
+      "name": "Chase Field",
+      "city": "Phoenix",
+      "team": "AZ",
+      "foul_territory": "average",
+      "dimensions": {
+        "left_field_line": 330,
+        "left_center": 374,
+        "center_field": 407,
+        "right_center": 374,
+        "right_field_line": 334,
+        "left_field_wall_height": 7,
+        "center_field_wall_height": 25,
+        "right_field_wall_height": 7
+      }
+    }
+  }
+}

@@ -1,0 +1,79 @@
+{
+  "stadiums": {
+    "little_league": {
+      "name": "Little League Dimensions",
+      "description": "Standard Little League field dimensions",
+      "custom": true,
+      "dimensions": {
+        "left_field_line": 200,
+        "left_center": 225,
+        "center_field": 250,
+        "right_center": 225,
+        "right_field_line": 200,
+        "left_field_wall_height": 6,
+        "center_field_wall_height": 6,
+        "right_field_wall_height": 6
+      }
+    },
+    "softball": {
+      "name": "Softball Field",
+      "description": "Standard softball field dimensions",
+      "custom": true,
+      "dimensions": {
+        "left_field_line": 250,
+        "left_center": 275,
+        "center_field": 300,
+        "right_center": 275,
+        "right_field_line": 250,
+        "left_field_wall_height": 6,
+        "center_field_wall_height": 6,
+        "right_field_wall_height": 6
+      }
+    },
+    "perfect_symmetry": {
+      "name": "Perfect Symmetry Park",
+      "description": "Perfectly symmetrical ballpark",
+      "custom": true,
+      "dimensions": {
+        "left_field_line": 330,
+        "left_center": 375,
+        "center_field": 400,
+        "right_center": 375,
+        "right_field_line": 330,
+        "left_field_wall_height": 12,
+        "center_field_wall_height": 12,
+        "right_field_wall_height": 12
+      }
+    },
+    "home_run_derby": {
+      "name": "Home Run Derby Park",
+      "description": "Extremely hitter-friendly dimensions",
+      "custom": true,
+      "dimensions": {
+        "left_field_line": 280,
+        "left_center": 310,
+        "center_field": 350,
+        "right_center": 310,
+        "right_field_line": 280,
+        "left_field_wall_height": 8,
+        "center_field_wall_height": 8,
+        "right_field_wall_height": 8
+      }
+    },
+    "pitchers_paradise": {
+      "name": "Pitcher's Paradise",
+      "description": "Extremely pitcher-friendly dimensions",
+      "custom": true,
+      "dimensions": {
+        "left_field_line": 380,
+        "left_center": 420,
+        "center_field": 480,
+        "right_center": 420,
+        "right_field_line": 380,
+        "left_field_wall_height": 20,
+        "center_field_wall_height": 20,
+        "right_field_wall_height": 20
+      }
+    }
+  }
+}

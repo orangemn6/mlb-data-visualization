@@ -1,0 +1,1446 @@
+{
+  "players": {
+    "592450": {
+      "id": 592450,
+      "name": "Aaron Judge",
+      "first_name": "Aaron",
+      "last_name": "Judge",
+      "teams": [
+        "NYY"
+      ],
+      "positions": [
+        "RF",
+        "CF"
+      ],
+      "years_active": [
+        2016,
+        2017,
+        2018,
+        2019,
+        2020,
+        2021,
+        2022,
+        2023,
+        2024
+      ],
+      "mlb_debut": null,
+      "birth_year": null,
+      "search_variants": [
+        "judge",
+        "aaron judge",
+        "judge, aaron",
+        "a. judge"
+      ]
+    },
+    "545361": {
+      "id": 545361,
+      "name": "Mike Trout",
+      "first_name": "Mike",
+      "last_name": "Trout",
+      "teams": [
+        "LAA"
+      ],
+      "positions": [
+        "CF"
+      ],
+      "years_active": [
+        2011,
+        2012,
+        2013,
+        2014,
+        2015,
+        2016,
+        2017,
+        2018,
+        2019,
+        2020,
+        2021,
+        2022,
+        2023,
+        2024
+      ],
+      "mlb_debut": null,
+      "birth_year": null,
+      "search_variants": [
+        "mike trout",
+        "trout, mike",
+        "trout",
+        "m. trout"
+      ]
+    },
+    "660271": {
+      "id": 660271,
+      "name": "Ronald Acu\u00f1a Jr.",
+      "first_name": "Ronald",
+      "last_name": "Acu\u00f1a Jr.",
+      "teams": [
+        "ATL"
+      ],
+      "positions": [
+        "RF",
+        "CF"
+      ],
+      "years_active": [
+        2018,
+        2019,
+        2020,
+        2021,
+        2022,
+        2023,
+        2024
+      ],
+      "mlb_debut": null,
+      "birth_year": null,
+      "search_variants": [
+        "acu\u00f1a jr., ronald",
+        "r. acu\u00f1a jr.",
+        "ronald acu\u00f1a jr.",
+        "acu\u00f1a jr."
+      ]
+    },
+    "605141": {
+      "id": 605141,
+      "name": "mookie betts",
+      "first_name": "mookie",
+      "last_name": "betts",
+      "teams": [],
+      "positions": [],
+      "years_active": [
+        2014,
+        2015,
+        2016,
+        2017,
+        2018,
+        2019,
+        2020,
+        2021,
+        2022,
+        2023,
+        2024,
+        2025
+      ],
+      "mlb_debut": 2014.0,
+      "birth_year": null,
+      "search_variants": [
+        "mookie betts",
+        "betts",
+        "betts, mookie",
+        "m. betts"
+      ]
+    },
+    "-1": {
+      "id": -1,
+      "name": "epy guerrero",
+      "first_name": "epy",
+      "last_name": "guerrero",
+      "teams": [],
+      "positions": [],
+      "years_active": [],
+      "mlb_debut": NaN,
+      "birth_year": null,
+      "search_variants": [
+        "epy guerrero",
+        "guerrero",
+        "guerrero, epy",
+        "e. guerrero"
+      ]
+    },
+    "692285": {
+      "id": 692285,
+      "name": "luis guerrero",
+      "first_name": "luis",
+      "last_name": "guerrero",
+      "teams": [],
+      "positions": [],
+      "years_active": [
+        2024,
+        2025
+      ],
+      "mlb_debut": 2024.0,
+      "birth_year": null,
+      "search_variants": [
+        "guerrero",
+        "l. guerrero",
+        "guerrero, luis",
+        "luis guerrero"
+      ]
+    },
+    "115221": {
+      "id": 115221,
+      "name": "mario guerrero",
+      "first_name": "mario",
+      "last_name": "guerrero",
+      "teams": [],
+      "positions": [],
+      "years_active": [],
+      "mlb_debut": 1973.0,
+      "birth_year": null,
+      "search_variants": [
+        "guerrero, mario",
+        "guerrero",
+        "mario guerrero",
+        "m. guerrero"
+      ]
+    },
+    "594027": {
+      "id": 594027,
+      "name": "tayron guerrero",
+      "first_name": "tayron",
+      "last_name": "guerrero",
+      "teams": [],
+      "positions": [],
+      "years_active": [
+        2016,
+        2017,
+        2018,
+        2019
+      ],
+      "mlb_debut": 2016.0,
+      "birth_year": null,
+      "search_variants": [
+        "guerrero",
+        "guerrero, tayron",
+        "t. guerrero",
+        "tayron guerrero"
+      ]
+    },
+    "115224": {
+      "id": 115224,
+      "name": "wilton guerrero",
+      "first_name": "wilton",
+      "last_name": "guerrero",
+      "teams": [],
+      "positions": [],
+      "years_active": [],
+      "mlb_debut": 1996.0,
+      "birth_year": null,
+      "search_variants": [
+        "w. guerrero",
+        "guerrero",
+        "wilton guerrero",
+        "guerrero, wilton"
+      ]
+    },
+    "115222": {
+      "id": 115222,
+      "name": "pedro guerrero",
+      "first_name": "pedro",
+      "last_name": "guerrero",
+      "teams": [],
+      "positions": [],
+      "years_active": [],
+      "mlb_debut": 1978.0,
+      "birth_year": null,
+      "search_variants": [
+        "guerrero",
+        "pedro guerrero",
+        "p. guerrero",
+        "guerrero, pedro"
+      ]
+    },
+    "602115": {
+      "id": 602115,
+      "name": "gabriel guerrero",
+      "first_name": "gabriel",
+      "last_name": "guerrero",
+      "teams": [],
+      "positions": [],
+      "years_active": [
+        2018
+      ],
+      "mlb_debut": 2018.0,
+      "birth_year": null,
+      "search_variants": [
+        "guerrero",
+        "guerrero, gabriel",
+        "g. guerrero",
+        "gabriel guerrero"
+      ]
+    },
+    "463313": {
+      "id": 463313,
+      "name": "pedro guerrero",
+      "first_name": "pedro",
+      "last_name": "guerrero",
+      "teams": [],
+      "positions": [],
+      "years_active": [],
+      "mlb_debut": NaN,
+      "birth_year": null,
+      "search_variants": [
+        "guerrero",
+        "pedro guerrero",
+        "p. guerrero",
+        "guerrero, pedro"
+      ]
+    },
+    "648717": {
+      "id": 648717,
+      "name": "alex guerrero",
+      "first_name": "alex",
+      "last_name": "guerrero",
+      "teams": [],
+      "positions": [],
+      "years_active": [
+        2014,
+        2015
+      ],
+      "mlb_debut": 2014.0,
+      "birth_year": null,
+      "search_variants": [
+        "guerrero",
+        "guerrero, alex",
+        "a. guerrero",
+        "alex guerrero"
+      ]
+    },
+    "665489": {
+      "id": 665489,
+      "name": "vladimir guerrero",
+      "first_name": "vladimir",
+      "last_name": "guerrero",
+      "teams": [],
+      "positions": [],
+      "years_active": [
+        2019,
+        2020,
+        2021,
+        2022,
+        2023,
+        2024,
+        2025
+      ],
+      "mlb_debut": 2019.0,
+      "birth_year": null,
+      "search_variants": [
+        "guerrero",
+        "vladimir guerrero",
+        "guerrero, vladimir",
+        "v. guerrero"
+      ]
+    },
+    "115223": {
+      "id": 115223,
+      "name": "vladimir guerrero",
+      "first_name": "vladimir",
+      "last_name": "guerrero",
+      "teams": [],
+      "positions": [],
+      "years_active": [
+        2008,
+        2009,
+        2010,
+        2011
+      ],
+      "mlb_debut": 1996.0,
+      "birth_year": null,
+      "search_variants": [
+        "guerrero",
+        "vladimir guerrero",
+        "guerrero, vladimir",
+        "v. guerrero"
+      ]
+    },
+    "492489": {
+      "id": 492489,
+      "name": "mike guerrero",
+      "first_name": "mike",
+      "last_name": "guerrero",
+      "teams": [],
+      "positions": [],
+      "years_active": [],
+      "mlb_debut": NaN,
+      "birth_year": null,
+      "search_variants": [
+        "guerrero",
+        "mike guerrero",
+        "m. guerrero",
+        "guerrero, mike"
+      ]
+    },
+    "115220": {
+      "id": 115220,
+      "name": "juan guerrero",
+      "first_name": "juan",
+      "last_name": "guerrero",
+      "teams": [],
+      "positions": [],
+      "years_active": [],
+      "mlb_debut": 1992.0,
+      "birth_year": null,
+      "search_variants": [
+        "guerrero",
+        "juan guerrero",
+        "guerrero, juan",
+        "j. guerrero"
+      ]
+    },
+    "670869": {
+      "id": 670869,
+      "name": "livan soto",
+      "first_name": "livan",
+      "last_name": "soto",
+      "teams": [],
+      "positions": [],
+      "years_active": [
+        2022,
+        2023,
+        2024
+      ],
+      "mlb_debut": 2022.0,
+      "birth_year": null,
+      "search_variants": [
+        "livan soto",
+        "l. soto",
+        "soto, livan",
+        "soto"
+      ]
+    },
+    "434567": {
+      "id": 434567,
+      "name": "geovany soto",
+      "first_name": "geovany",
+      "last_name": "soto",
+      "teams": [],
+      "positions": [],
+      "years_active": [
+        2008,
+        2009,
+        2010,
+        2011,
+        2012,
+        2013,
+        2014,
+        2015,
+        2016,
+        2017
+      ],
+      "mlb_debut": 2005.0,
+      "birth_year": null,
+      "search_variants": [
+        "g. soto",
+        "soto",
+        "geovany soto",
+        "soto, geovany"
+      ]
+    },
+    "519303": {
+      "id": 519303,
+      "name": "elliot soto",
+      "first_name": "elliot",
+      "last_name": "soto",
+      "teams": [],
+      "positions": [],
+      "years_active": [
+        2020
+      ],
+      "mlb_debut": 2020.0,
+      "birth_year": null,
+      "search_variants": [
+        "e. soto",
+        "soto, elliot",
+        "elliot soto",
+        "soto"
+      ]
+    },
+    "519304": {
+      "id": 519304,
+      "name": "neftali soto",
+      "first_name": "neftali",
+      "last_name": "soto",
+      "teams": [],
+      "positions": [],
+      "years_active": [
+        2013,
+        2014
+      ],
+      "mlb_debut": 2013.0,
+      "birth_year": null,
+      "search_variants": [
+        "neftali soto",
+        "n. soto",
+        "soto",
+        "soto, neftali"
+      ]
+    },
+    "665742": {
+      "id": 665742,
+      "name": "juan soto",
+      "first_name": "juan",
+      "last_name": "soto",
+      "teams": [],
+      "positions": [],
+      "years_active": [
+        2018,
+        2019,
+        2020,
+        2021,
+        2022,
+        2023,
+        2024,
+        2025
+      ],
+      "mlb_debut": 2018.0,
+      "birth_year": null,
+      "search_variants": [
+        "juan soto",
+        "j. soto",
+        "soto",
+        "soto, juan"
+      ]
+    },
+    "543803": {
+      "id": 543803,
+      "name": "giovanni soto",
+      "first_name": "giovanni",
+      "last_name": "soto",
+      "teams": [],
+      "positions": [],
+      "years_active": [
+        2015
+      ],
+      "mlb_debut": 2015.0,
+      "birth_year": null,
+      "search_variants": [
+        "giovanni soto",
+        "soto, giovanni",
+        "g. soto",
+        "soto"
+      ]
+    },
+    "642397": {
+      "id": 642397,
+      "name": "gregory soto",
+      "first_name": "gregory",
+      "last_name": "soto",
+      "teams": [],
+      "positions": [],
+      "years_active": [
+        2019,
+        2020,
+        2021,
+        2022,
+        2023,
+        2024,
+        2025
+      ],
+      "mlb_debut": 2019.0,
+      "birth_year": null,
+      "search_variants": [
+        "soto",
+        "soto, gregory",
+        "g. soto",
+        "gregory soto"
+      ]
+    },
+    "596019": {
+      "id": 596019,
+      "name": "francisco lindor",
+      "first_name": "francisco",
+      "last_name": "lindor",
+      "teams": [],
+      "positions": [],
+      "years_active": [
+        2015,
+        2016,
+        2017,
+        2018,
+        2019,
+        2020,
+        2021,
+        2022,
+        2023,
+        2024,
+        2025
+      ],
+      "mlb_debut": 2015.0,
+      "birth_year": null,
+      "search_variants": [
+        "francisco lindor",
+        "paco lindor",
+        "lindor, francisco",
+        "lindor",
+        "f. lindor"
+      ]
+    },
+    "678391": {
+      "id": 678391,
+      "name": "jorbit vivas",
+      "first_name": "jorbit",
+      "last_name": "vivas",
+      "teams": [],
+      "positions": [],
+      "years_active": [
+        2025
+      ],
+      "mlb_debut": 2025.0,
+      "birth_year": null,
+      "search_variants": [
+        "vivas, jorbit",
+        "j. vivas",
+        "vivas",
+        "jorbit vivas"
+      ]
+    },
+    "605512": {
+      "id": 605512,
+      "name": "preston tucker",
+      "first_name": "preston",
+      "last_name": "tucker",
+      "teams": [],
+      "positions": [],
+      "years_active": [
+        2015,
+        2016,
+        2017,
+        2018
+      ],
+      "mlb_debut": 2015.0,
+      "birth_year": null,
+      "search_variants": [
+        "tucker",
+        "tucker, preston",
+        "preston tucker",
+        "p. tucker"
+      ]
+    },
+    "657061": {
+      "id": 657061,
+      "name": "cole tucker",
+      "first_name": "cole",
+      "last_name": "tucker",
+      "teams": [],
+      "positions": [],
+      "years_active": [
+        2019,
+        2020,
+        2021,
+        2022,
+        2023,
+        2024
+      ],
+      "mlb_debut": 2019.0,
+      "birth_year": null,
+      "search_variants": [
+        "cole tucker",
+        "tucker",
+        "tucker, cole",
+        "c. tucker"
+      ]
+    },
+    "457761": {
+      "id": 457761,
+      "name": "ryan tucker",
+      "first_name": "ryan",
+      "last_name": "tucker",
+      "teams": [],
+      "positions": [],
+      "years_active": [
+        2008,
+        2009,
+        2010,
+        2011
+      ],
+      "mlb_debut": 2008.0,
+      "birth_year": null,
+      "search_variants": [
+        "tucker",
+        "tucker, ryan",
+        "ryan tucker",
+        "r. tucker"
+      ]
+    },
+    "663656": {
+      "id": 663656,
+      "name": "kyle tucker",
+      "first_name": "kyle",
+      "last_name": "tucker",
+      "teams": [],
+      "positions": [],
+      "years_active": [
+        2018,
+        2019,
+        2020,
+        2021,
+        2022,
+        2023,
+        2024,
+        2025
+      ],
+      "mlb_debut": 2018.0,
+      "birth_year": null,
+      "search_variants": [
+        "kyle tucker",
+        "tucker, kyle",
+        "tucker",
+        "k. tucker"
+      ]
+    },
+    "519381": {
+      "id": 519381,
+      "name": "pat venditte",
+      "first_name": "pat",
+      "last_name": "venditte",
+      "teams": [],
+      "positions": [],
+      "years_active": [
+        2015,
+        2016,
+        2017,
+        2018,
+        2019,
+        2020
+      ],
+      "mlb_debut": 2015.0,
+      "birth_year": null,
+      "search_variants": [
+        "venditte, pat",
+        "venditte",
+        "p. venditte",
+        "pat venditte"
+      ]
+    },
+    "594798": {
+      "id": 594798,
+      "name": "jacob degrom",
+      "first_name": "jacob",
+      "last_name": "degrom",
+      "teams": [],
+      "positions": [],
+      "years_active": [
+        2014,
+        2015,
+        2016,
+        2017,
+        2018,
+        2019,
+        2020,
+        2021,
+        2022,
+        2023,
+        2024,
+        2025
+      ],
+      "mlb_debut": 2014.0,
+      "birth_year": null,
+      "search_variants": [
+        "jacob degrom",
+        "degrom, jacob",
+        "j. degrom",
+        "degrom"
+      ]
+    }
+  },
+  "last_updated": null,
+  "search_index": {
+    "by_name": {
+      "aaron judge": [
+        "592450",
+        "592450",
+        "592450",
+        "592450",
+        "592450",
+        "592450",
+        "592450",
+        "592450"
+      ],
+      "a. judge": [
+        "592450",
+        "592450",
+        "592450",
+        "592450",
+        "592450",
+        "592450",
+        "592450",
+        "592450"
+      ],
+      "judge": [
+        "592450",
+        "592450",
+        "592450",
+        "592450",
+        "592450",
+        "592450",
+        "592450",
+        "592450"
+      ],
+      "judge, aaron": [
+        "592450",
+        "592450",
+        "592450",
+        "592450",
+        "592450",
+        "592450",
+        "592450",
+        "592450"
+      ],
+      "mike trout": [
+        "545361",
+        "545361",
+        "545361",
+        "545361",
+        "545361",
+        "545361",
+        "545361",
+        "545361"
+      ],
+      "trout": [
+        "545361",
+        "545361",
+        "545361",
+        "545361",
+        "545361",
+        "545361",
+        "545361",
+        "545361"
+      ],
+      "m. trout": [
+        "545361",
+        "545361",
+        "545361",
+        "545361",
+        "545361",
+        "545361",
+        "545361",
+        "545361"
+      ],
+      "trout, mike": [
+        "545361",
+        "545361",
+        "545361",
+        "545361",
+        "545361",
+        "545361",
+        "545361",
+        "545361"
+      ],
+      "ronald acu\u00f1a jr.": [
+        "660271",
+        "660271",
+        "660271",
+        "660271",
+        "660271",
+        "660271",
+        "660271",
+        "660271"
+      ],
+      "acu\u00f1a jr.": [
+        "660271",
+        "660271",
+        "660271",
+        "660271",
+        "660271",
+        "660271",
+        "660271",
+        "660271"
+      ],
+      "r. acu\u00f1a jr.": [
+        "660271",
+        "660271",
+        "660271",
+        "660271",
+        "660271",
+        "660271",
+        "660271",
+        "660271"
+      ],
+      "acu\u00f1a jr., ronald": [
+        "660271",
+        "660271",
+        "660271",
+        "660271",
+        "660271",
+        "660271",
+        "660271",
+        "660271"
+      ],
+      "mookie betts": [
+        "605141"
+      ],
+      "betts": [
+        "605141"
+      ],
+      "betts, mookie": [
+        "605141"
+      ],
+      "m. betts": [
+        "605141"
+      ],
+      "epy guerrero": [
+        "-1"
+      ],
+      "guerrero": [
+        "-1",
+        "692285",
+        "115221",
+        "594027",
+        "115224",
+        "115222",
+        "602115",
+        "463313",
+        "648717",
+        "665489",
+        "115223",
+        "492489",
+        "115220"
+      ],
+      "guerrero, epy": [
+        "-1"
+      ],
+      "e. guerrero": [
+        "-1"
+      ],
+      "l. guerrero": [
+        "692285"
+      ],
+      "guerrero, luis": [
+        "692285"
+      ],
+      "luis guerrero": [
+        "692285"
+      ],
+      "guerrero, mario": [
+        "115221"
+      ],
+      "mario guerrero": [
+        "115221"
+      ],
+      "m. guerrero": [
+        "115221",
+        "492489"
+      ],
+      "guerrero, tayron": [
+        "594027"
+      ],
+      "t. guerrero": [
+        "594027"
+      ],
+      "tayron guerrero": [
+        "594027"
+      ],
+      "w. guerrero": [
+        "115224"
+      ],
+      "wilton guerrero": [
+        "115224"
+      ],
+      "guerrero, wilton": [
+        "115224"
+      ],
+      "pedro guerrero": [
+        "115222",
+        "463313"
+      ],
+      "p. guerrero": [
+        "115222",
+        "463313"
+      ],
+      "guerrero, pedro": [
+        "115222",
+        "463313"
+      ],
+      "guerrero, gabriel": [
+        "602115"
+      ],
+      "g. guerrero": [
+        "602115"
+      ],
+      "gabriel guerrero": [
+        "602115"
+      ],
+      "guerrero, alex": [
+        "648717"
+      ],
+      "a. guerrero": [
+        "648717"
+      ],
+      "alex guerrero": [
+        "648717"
+      ],
+      "vladimir guerrero": [
+        "665489",
+        "115223"
+      ],
+      "guerrero, vladimir": [
+        "665489",
+        "115223"
+      ],
+      "v. guerrero": [
+        "665489",
+        "115223"
+      ],
+      "mike guerrero": [
+        "492489"
+      ],
+      "guerrero, mike": [
+        "492489"
+      ],
+      "juan guerrero": [
+        "115220"
+      ],
+      "guerrero, juan": [
+        "115220"
+      ],
+      "j. guerrero": [
+        "115220"
+      ],
+      "livan soto": [
+        "670869"
+      ],
+      "l. soto": [
+        "670869"
+      ],
+      "soto, livan": [
+        "670869"
+      ],
+      "soto": [
+        "670869",
+        "434567",
+        "519303",
+        "519304",
+        "665742",
+        "543803",
+        "642397"
+      ],
+      "g. soto": [
+        "434567",
+        "543803",
+        "642397"
+      ],
+      "geovany soto": [
+        "434567"
+      ],
+      "soto, geovany": [
+        "434567"
+      ],
+      "e. soto": [
+        "519303"
+      ],
+      "soto, elliot": [
+        "519303"
+      ],
+      "elliot soto": [
+        "519303"
+      ],
+      "neftali soto": [
+        "519304"
+      ],
+      "n. soto": [
+        "519304"
+      ],
+      "soto, neftali": [
+        "519304"
+      ],
+      "juan soto": [
+        "665742"
+      ],
+      "j. soto": [
+        "665742"
+      ],
+      "soto, juan": [
+        "665742"
+      ],
+      "giovanni soto": [
+        "543803"
+      ],
+      "soto, giovanni": [
+        "543803"
+      ],
+      "soto, gregory": [
+        "642397"
+      ],
+      "gregory soto": [
+        "642397"
+      ],
+      "francisco lindor": [
+        "596019"
+      ],
+      "paco lindor": [
+        "596019"
+      ],
+      "lindor, francisco": [
+        "596019"
+      ],
+      "lindor": [
+        "596019"
+      ],
+      "f. lindor": [
+        "596019"
+      ],
+      "vivas, jorbit": [
+        "678391"
+      ],
+      "j. vivas": [
+        "678391"
+      ],
+      "vivas": [
+        "678391"
+      ],
+      "jorbit vivas": [
+        "678391"
+      ],
+      "tucker": [
+        "605512",
+        "657061",
+        "457761",
+        "663656"
+      ],
+      "tucker, preston": [
+        "605512"
+      ],
+      "preston tucker": [
+        "605512"
+      ],
+      "p. tucker": [
+        "605512"
+      ],
+      "cole tucker": [
+        "657061"
+      ],
+      "tucker, cole": [
+        "657061"
+      ],
+      "c. tucker": [
+        "657061"
+      ],
+      "tucker, ryan": [
+        "457761"
+      ],
+      "ryan tucker": [
+        "457761"
+      ],
+      "r. tucker": [
+        "457761"
+      ],
+      "kyle tucker": [
+        "663656"
+      ],
+      "tucker, kyle": [
+        "663656"
+      ],
+      "k. tucker": [
+        "663656"
+      ],
+      "venditte, pat": [
+        "519381"
+      ],
+      "venditte": [
+        "519381"
+      ],
+      "p. venditte": [
+        "519381"
+      ],
+      "pat venditte": [
+        "519381"
+      ],
+      "jacob degrom": [
+        "594798"
+      ],
+      "degrom, jacob": [
+        "594798"
+      ],
+      "j. degrom": [
+        "594798"
+      ],
+      "degrom": [
+        "594798"
+      ]
+    },
+    "by_team": {
+      "NYY": [
+        "592450",
+        "592450",
+        "592450",
+        "592450",
+        "592450",
+        "592450",
+        "592450",
+        "592450"
+      ],
+      "LAA": [
+        "545361",
+        "545361",
+        "545361",
+        "545361",
+        "545361",
+        "545361",
+        "545361",
+        "545361"
+      ],
+      "ATL": [
+        "660271",
+        "660271",
+        "660271",
+        "660271",
+        "660271",
+        "660271",
+        "660271",
+        "660271"
+      ]
+    },
+    "by_position": {
+      "RF": [
+        "592450",
+        "660271",
+        "592450",
+        "660271",
+        "592450",
+        "660271",
+        "592450",
+        "660271",
+        "592450",
+        "660271",
+        "592450",
+        "660271",
+        "592450",
+        "660271",
+        "592450",
+        "660271"
+      ],
+      "CF": [
+        "592450",
+        "545361",
+        "660271",
+        "592450",
+        "545361",
+        "660271",
+        "592450",
+        "545361",
+        "660271",
+        "592450",
+        "545361",
+        "660271",
+        "592450",
+        "545361",
+        "660271",
+        "592450",
+        "545361",
+        "660271",
+        "592450",
+        "545361",
+        "660271",
+        "592450",
+        "545361",
+        "660271"
+      ]
+    },
+    "by_year": {
+      "2016": [
+        "592450",
+        "545361",
+        "434567"
+      ],
+      "2017": [
+        "592450",
+        "545361",
+        "434567"
+      ],
+      "2018": [
+        "592450",
+        "545361",
+        "660271",
+        "665742"
+      ],
+      "2019": [
+        "592450",
+        "545361",
+        "660271",
+        "665742",
+        "642397"
+      ],
+      "2020": [
+        "592450",
+        "545361",
+        "660271",
+        "519303",
+        "665742",
+        "642397"
+      ],
+      "2021": [
+        "592450",
+        "545361",
+        "660271",
+        "665742",
+        "642397"
+      ],
+      "2022": [
+        "592450",
+        "545361",
+        "660271",
+        "670869",
+        "665742",
+        "642397"
+      ],
+      "2023": [
+        "592450",
+        "545361",
+        "660271",
+        "670869",
+        "665742",
+        "642397"
+      ],
+      "2024": [
+        "592450",
+        "545361",
+        "660271",
+        "670869",
+        "665742",
+        "642397"
+      ],
+      "2011": [
+        "545361",
+        "434567"
+      ],
+      "2012": [
+        "545361",
+        "434567"
+      ],
+      "2013": [
+        "545361",
+        "434567",
+        "519304"
+      ],
+      "2014": [
+        "545361",
+        "434567",
+        "519304"
+      ],
+      "2015": [
+        "545361",
+        "434567",
+        "543803"
+      ],
+      "2025": [
+        "665742",
+        "642397"
+      ],
+      "2008": [
+        "434567"
+      ],
+      "2009": [
+        "434567"
+      ],
+      "2010": [
+        "434567"
+      ],
+      "2016": [
+        "592450",
+        "545361",
+        "596019",
+        "605512",
+        "519381",
+        "594798"
+      ],
+      "2017": [
+        "592450",
+        "545361",
+        "596019",
+        "605512",
+        "519381",
+        "594798"
+      ],
+      "2018": [
+        "592450",
+        "545361",
+        "660271",
+        "596019",
+        "605512",
+        "663656",
+        "519381",
+        "594798"
+      ],
+      "2019": [
+        "592450",
+        "545361",
+        "660271",
+        "596019",
+        "657061",
+        "663656",
+        "519381",
+        "594798"
+      ],
+      "2020": [
+        "592450",
+        "545361",
+        "660271",
+        "596019",
+        "657061",
+        "663656",
+        "519381",
+        "594798"
+      ],
+      "2021": [
+        "592450",
+        "545361",
+        "660271",
+        "596019",
+        "657061",
+        "663656",
+        "594798"
+      ],
+      "2022": [
+        "592450",
+        "545361",
+        "660271",
+        "596019",
+        "657061",
+        "663656",
+        "594798"
+      ],
+      "2023": [
+        "592450",
+        "545361",
+        "660271",
+        "596019",
+        "657061",
+        "663656",
+        "594798"
+      ],
+      "2024": [
+        "592450",
+        "545361",
+        "660271",
+        "596019",
+        "657061",
+        "663656",
+        "594798"
+      ],
+      "2011": [
+        "545361",
+        "457761"
+      ],
+      "2012": [
+        "545361"
+      ],
+      "2013": [
+        "545361"
+      ],
+      "2014": [
+        "545361",
+        "594798"
+      ],
+      "2015": [
+        "545361",
+        "596019",
+        "605512",
+        "519381",
+        "594798"
+      ],
+      "2025": [
+        "596019",
+        "678391",
+        "663656",
+        "594798"
+      ],
+      "2008": [
+        "457761"
+      ],
+      "2009": [
+        "457761"
+      ],
+      "2010": [
+        "457761"
+      ]
+    }
+  }
+}

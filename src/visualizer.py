@@ -176,9 +176,16 @@ class SprayChartVisualizer:
                 color=color_values,
                 colorscale=color_scale,
                 opacity=opacity,
-                line=dict(width=0.5, color='rgba(50, 50, 50, 0.3)'),
+                line=dict(width=0.5, color='rgba(200, 200, 200, 0.3)'),
                 colorbar=dict(
-                    title=self._get_column_display_name(color_by)
+                    title=dict(
+                        text=self._get_column_display_name(color_by),
+                        font=dict(color="white")
+                    ),
+                    tickfont=dict(color="white"),
+                    bgcolor='rgba(14, 17, 23, 0.8)',
+                    bordercolor='rgba(128, 128, 128, 0.5)',
+                    borderwidth=1
                 )
             ),
             text=hover_text,
@@ -253,7 +260,7 @@ class SprayChartVisualizer:
             x=field_coords['left_foul_line']['x'],
             y=field_coords['left_foul_line']['y'],
             mode='lines',
-            line=dict(color='green', width=2, dash='dash'),
+            line=dict(color='#32CD32', width=2, dash='dash'),  # Bright green for dark mode
             name='Left Foul Line',
             showlegend=False,
             hoverinfo='skip'
@@ -263,7 +270,7 @@ class SprayChartVisualizer:
             x=field_coords['right_foul_line']['x'],
             y=field_coords['right_foul_line']['y'],
             mode='lines',
-            line=dict(color='green', width=2, dash='dash'),
+            line=dict(color='#32CD32', width=2, dash='dash'),  # Bright green for dark mode
             name='Right Foul Line',
             showlegend=False,
             hoverinfo='skip'
@@ -274,7 +281,7 @@ class SprayChartVisualizer:
             x=field_coords['outfield_arc']['x'],
             y=field_coords['outfield_arc']['y'],
             mode='lines',
-            line=dict(color='brown', width=1, dash='dot'),
+            line=dict(color='#D2B48C', width=1, dash='dot'),  # Tan/wheat color for dark mode
             name='Field Boundary',
             showlegend=False,
             hoverinfo='skip'
@@ -345,10 +352,12 @@ class SprayChartVisualizer:
 
     def _get_stadium_color(self, stadium_key: str) -> str:
         """Get a consistent color for each stadium."""
+        # Bright colors that work well on dark backgrounds
         colors = [
             '#FF6B6B', '#4ECDC4', '#45B7D1', '#96CEB4', '#FFEAA7',
-            '#DDA0DD', '#F39C12', '#E74C3C', '#9B59B6', '#3498DB',
-            '#1ABC9C', '#2ECC71', '#F1C40F', '#E67E22', '#E91E63'
+            '#DDA0DD', '#FFA500', '#FF4757', '#9B59B6', '#3498DB',
+            '#1ABC9C', '#2ECC71', '#F1C40F', '#E67E22', '#E91E63',
+            '#00D2D3', '#FF9FF3', '#54A0FF', '#5F27CD', '#FD79A8'
         ]
 
         # Use hash of stadium key to get consistent color
@@ -381,36 +390,48 @@ class SprayChartVisualizer:
             else:
                 chart_title = "Baseball Spray Chart"
 
+        # Dark theme configuration
         fig.update_layout(
             title=dict(
                 text=chart_title,
                 x=0.5,
-                font=dict(size=20, family="Arial, sans-serif")
+                font=dict(size=20, family="Arial, sans-serif", color="white")
             ),
             xaxis=dict(
-                title="Distance from Center (feet)",
+                title=dict(
+                    text="Distance from Center (feet)",
+                    font=dict(color="white")
+                ),
                 range=x_range,
                 scaleanchor="y",
                 scaleratio=1,
                 showgrid=True,
-                gridcolor='lightgray',
+                gridcolor='rgba(128, 128, 128, 0.3)',
                 gridwidth=1,
                 zeroline=True,
-                zerolinecolor='black',
-                zerolinewidth=2
+                zerolinecolor='rgba(255, 255, 255, 0.8)',
+                zerolinewidth=2,
+                tickfont=dict(color="white"),
+                linecolor='rgba(128, 128, 128, 0.5)'
             ),
             yaxis=dict(
-                title="Distance from Home Plate (feet)",
+                title=dict(
+                    text="Distance from Home Plate (feet)",
+                    font=dict(color="white")
+                ),
                 range=y_range,
                 showgrid=True,
-                gridcolor='lightgray',
+                gridcolor='rgba(128, 128, 128, 0.3)',
                 gridwidth=1,
                 zeroline=True,
-                zerolinecolor='black',
-                zerolinewidth=2
+                zerolinecolor='rgba(255, 255, 255, 0.8)',
+                zerolinewidth=2,
+                tickfont=dict(color="white"),
+                linecolor='rgba(128, 128, 128, 0.5)'
             ),
-            plot_bgcolor='rgba(245, 245, 245, 0.8)',
-            paper_bgcolor='white',
+            plot_bgcolor='rgba(14, 17, 23, 1)',  # Dark background matching Streamlit
+            paper_bgcolor='rgba(14, 17, 23, 1)',  # Dark paper background
+            font=dict(color="white"),
             width=800,
             height=700,
             showlegend=True,
@@ -418,7 +439,11 @@ class SprayChartVisualizer:
                 yanchor="top",
                 y=0.99,
                 xanchor="left",
-                x=1.01
+                x=1.01,
+                bgcolor='rgba(14, 17, 23, 0.8)',
+                bordercolor='rgba(128, 128, 128, 0.5)',
+                borderwidth=1,
+                font=dict(color="white")
             )
         )
 
@@ -504,14 +529,72 @@ class SprayChartVisualizer:
                 marker_color=[self._get_stadium_color(key) for key in stadium_keys[:len(stadium_names)]],
                 text=stadium_hr_counts,
                 textposition='auto',
+                textfont=dict(color='white')
             )
         ])
 
         fig.update_layout(
-            title="Home Runs by Stadium",
-            xaxis_title="Stadium",
-            yaxis_title="Total Home Runs",
+            title=dict(
+                text="Home Runs by Stadium",
+                font=dict(color="white")
+            ),
+            xaxis=dict(
+                title=dict(
+                    text="Stadium",
+                    font=dict(color="white")
+                ),
+                tickfont=dict(color="white"),
+                linecolor='rgba(128, 128, 128, 0.5)'
+            ),
+            yaxis=dict(
+                title=dict(
+                    text="Total Home Runs",
+                    font=dict(color="white")
+                ),
+                tickfont=dict(color="white"),
+                linecolor='rgba(128, 128, 128, 0.5)',
+                gridcolor='rgba(128, 128, 128, 0.3)'
+            ),
+            plot_bgcolor='rgba(14, 17, 23, 1)',
+            paper_bgcolor='rgba(14, 17, 23, 1)',
+            font=dict(color="white"),
             showlegend=False
+        )
+
+        return fig
+
+    def _create_park_factor_chart(
+        self,
+        hit_data: pd.DataFrame,
+        stadium_keys: List[str]
+    ) -> go.Figure:
+        """Create chart showing park factors for each stadium."""
+        # This is a placeholder implementation for park factors
+        # In a real implementation, you would calculate park factors
+        # based on league average home run rates vs stadium-specific rates
+
+        fig = go.Figure()
+
+        # Add a note that this feature is coming soon
+        fig.add_annotation(
+            text="Park Factor Analysis<br>Coming Soon",
+            xref="paper", yref="paper",
+            x=0.5, y=0.5,
+            showarrow=False,
+            font=dict(size=20, color="white"),
+            bgcolor='rgba(14, 17, 23, 0.8)',
+            bordercolor='rgba(128, 128, 128, 0.5)',
+            borderwidth=1
+        )
+
+        fig.update_layout(
+            plot_bgcolor='rgba(14, 17, 23, 1)',
+            paper_bgcolor='rgba(14, 17, 23, 1)',
+            font=dict(color="white"),
+            xaxis=dict(visible=False),
+            yaxis=dict(visible=False),
+            width=800,
+            height=400
         )
 
         return fig

@@ -12,7 +12,7 @@ from typing import List, Dict, Optional
 import plotly.graph_objects as go
 
 # Import our modules
-from src.search_engine import get_search_engine, initialize_with_basic_players
+from src.search_engine import get_search_engine, initialize_search_engine
 from src.data_fetcher import get_data_fetcher
 from src.coordinate_transform import (
     transform_statcast_dataframe,
@@ -34,11 +34,11 @@ st.set_page_config(
 
 def initialize_app():
     """Initialize the application and cache components."""
-    # Force initialization every time to avoid caching issues
+    # Initialize search engine (now happens automatically)
     if "search_initialized" not in st.session_state:
-        initialize_with_basic_players()
+        initialize_search_engine()
         st.session_state.search_initialized = True
-        st.sidebar.info("🔄 Search engine initialized with sample players")
+        st.sidebar.info("🔄 Search engine ready - try searching for any MLB player!")
 
 
 def create_sidebar():
@@ -50,7 +50,7 @@ def create_sidebar():
         player_name = st.text_input(
             "Player Name",
             placeholder="e.g., Aaron Judge, Mookie Betts, Shohei Ohtani",
-            help="Search any MLB player from 2008+. First search will fetch live data from MLB database."
+            help="Search any MLB player from the Statcast era (2008+). First search may take 10-20 seconds as we fetch live data from MLB database."
         )
 
         st.caption("💡 **Tip**: Try searching for any current or recent MLB player! The first search may take 10-20 seconds as we fetch live data.")
@@ -70,15 +70,6 @@ def create_sidebar():
                 index=0
             )
 
-        year_min, year_max = get_search_engine().get_years_range()
-        year_range = st.slider(
-            "Active Years",
-            min_value=max(2008, year_min),  # Statcast era starts 2008
-            max_value=min(2024, year_max),
-            value=(2020, 2024),
-            help="Filter players active during these years"
-        )
-
         search_clicked = st.button("🔍 Search Players", type="primary")
 
     # Player selection
@@ -89,15 +80,13 @@ def create_sidebar():
         # Debug the search
         search_engine = get_search_engine()
         total_players = len(search_engine.player_db.get("players", {}))
-        st.sidebar.caption(f"Searching {total_players} players...")
+        st.sidebar.caption(f"Searching {total_players} cached players...")
 
-        # Perform search
+        # Perform search - removed year filters
         search_results = search_engine.search_players(
             name_query=player_name if player_name else None,
             team=search_team if search_team != "All" else None,
             position=search_position if search_position != "All" else None,
-            year_min=year_range[0],
-            year_max=year_range[1],
             limit=20
         )
 
@@ -123,7 +112,7 @@ def create_sidebar():
         else:
             st.sidebar.warning("No players found matching search criteria")
             # Show what was searched for debugging
-            st.sidebar.caption(f"Searched: '{player_name}', Team: {search_team}, Position: {search_position}, Years: {year_range}")
+            st.sidebar.caption(f"Searched: '{player_name}', Team: {search_team}, Position: {search_position}")
     else:
         # Show popular players as suggestions
         search_engine = get_search_engine()

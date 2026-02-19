@@ -23,16 +23,53 @@ warnings.filterwarnings("ignore", category=UserWarning)
 class PlayerSearchEngine:
     """Advanced search engine for MLB players with caching and fuzzy matching."""
 
-    def __init__(self, cache_file: str = "data/players/player_database.json"):
+    def __init__(self, cache_file: str = None):
         """
         Initialize the search engine.
 
         Args:
             cache_file: Path to cached player database
         """
+        if cache_file is None:
+            # Use absolute path to ensure persistence between app runs
+            cache_file = os.path.join(os.getcwd(), "data", "players", "player_database.json")
+
         self.cache_file = cache_file
         self.player_db = self._load_or_create_database()
         self._last_update_check = None
+
+        # Ensure cache directory exists
+        os.makedirs(os.path.dirname(self.cache_file), exist_ok=True)
+
+        # Initialize with basic players if database is empty
+        if not self.player_db["players"]:
+            self._initialize_with_popular_players()
+
+    def _initialize_with_popular_players(self):
+        """Initialize with a set of popular players for immediate usability."""
+        popular_players = [
+            {"id": 592450, "name": "Aaron Judge", "first_name": "Aaron", "last_name": "Judge"},
+            {"id": 545361, "name": "Mike Trout", "first_name": "Mike", "last_name": "Trout"},
+            {"id": 660271, "name": "Ronald Acuña Jr.", "first_name": "Ronald", "last_name": "Acuña Jr."},
+            {"id": 665742, "name": "Shohei Ohtani", "first_name": "Shohei", "last_name": "Ohtani"},
+            {"id": 596059, "name": "Nolan Arenado", "first_name": "Nolan", "last_name": "Arenado"},
+            {"id": 608324, "name": "Mookie Betts", "first_name": "Mookie", "last_name": "Betts"},
+            {"id": 493316, "name": "Bryce Harper", "first_name": "Bryce", "last_name": "Harper"},
+            {"id": 665804, "name": "Juan Soto", "first_name": "Juan", "last_name": "Soto"},
+            {"id": 646240, "name": "Vladimir Guerrero Jr.", "first_name": "Vladimir", "last_name": "Guerrero Jr."},
+            {"id": 645277, "name": "Fernando Tatis Jr.", "first_name": "Fernando", "last_name": "Tatis Jr."},
+        ]
+
+        for player in popular_players:
+            self.add_player_to_database(
+                player_id=player["id"],
+                name=player["name"],
+                first_name=player["first_name"],
+                last_name=player["last_name"],
+                years_active=list(range(2018, 2025))  # Recent years
+            )
+
+        self._save_database()
 
     def _load_or_create_database(self) -> Dict:
         """Load existing player database or create empty one."""
@@ -214,86 +251,103 @@ class PlayerSearchEngine:
         if not name_query or len(name_query) < 2:
             return []
 
-        # Parse name query
-        name_parts = name_query.strip().split()
+        # Parse name query - handle various formats
+        name_query = name_query.strip()
+        name_parts = name_query.split()
+
+        search_attempts = []
+
         if len(name_parts) == 1:
-            # Single name - could be first or last
-            last_name = name_parts[0]
-            first_name = None
+            # Single name - try as both first and last name
+            search_attempts = [
+                (name_parts[0], None),  # As last name only
+                (None, name_parts[0])   # As first name only
+            ]
+        elif len(name_parts) == 2:
+            # Two parts - try "First Last" and "Last, First" formats
+            search_attempts = [
+                (name_parts[1], name_parts[0]),  # Last, First
+                (name_parts[0], name_parts[1])   # First, Last (backup)
+            ]
         else:
-            # Multiple parts - assume "First Last"
+            # Multiple parts - assume "First ... Last"
             first_name = name_parts[0]
             last_name = name_parts[-1]
+            search_attempts = [(last_name, first_name)]
 
-        # Try to fetch from pybaseball
-        try:
-            with st.spinner(f"Searching MLB database for '{name_query}'..."):
-                df = self.fetch_mlb_players(last_name, first_name)
+        new_players = []
 
-                if df.empty:
-                    return []
+        for last_name, first_name in search_attempts:
+            if len(new_players) >= 10:  # Limit results per search
+                break
 
-                players = []
-                for _, row in df.iterrows():
-                    # Extract player data
-                    player_id = row.get('key_mlbam')
-                    if pd.isna(player_id) or player_id <= 0:
+            try:
+                with st.spinner(f"Searching MLB database for '{name_query}'..."):
+                    df = self.fetch_mlb_players(last_name, first_name)
+
+                    if df.empty:
                         continue
 
-                    player_id = int(player_id)
+                    for _, row in df.iterrows():
+                        # Extract player data
+                        player_id = row.get('key_mlbam')
+                        if pd.isna(player_id) or player_id <= 0:
+                            continue
 
-                    # Skip if already in database
-                    if str(player_id) in self.player_db["players"]:
-                        continue
+                        player_id = int(player_id)
 
-                    first_name = str(row.get('name_first', '')).strip()
-                    last_name = str(row.get('name_last', '')).strip()
+                        # Skip if already in database
+                        if str(player_id) in self.player_db["players"]:
+                            continue
 
-                    if not first_name or not last_name:
-                        continue
+                        first_name_db = str(row.get('name_first', '')).strip()
+                        last_name_db = str(row.get('name_last', '')).strip()
 
-                    full_name = f"{first_name} {last_name}".strip()
+                        if not first_name_db or not last_name_db:
+                            continue
 
-                    # Create player data
-                    player_data = {
-                        "id": player_id,
-                        "name": full_name,
-                        "first_name": first_name,
-                        "last_name": last_name,
-                        "birth_year": row.get('birth_year') if not pd.isna(row.get('birth_year')) else None,
-                        "mlb_debut": row.get('mlb_played_first') if not pd.isna(row.get('mlb_played_first')) else None,
-                        "mlb_last": row.get('mlb_played_last') if not pd.isna(row.get('mlb_played_last')) else None,
-                        "teams": [],  # Will be populated from other sources if needed
-                        "positions": [],  # Will be populated from other sources if needed
-                        "years_active": self._extract_years_active(row),
-                        "source": "pybaseball"
-                    }
+                        full_name = f"{first_name_db} {last_name_db}".strip()
 
-                    # Only include players with recent activity (Statcast era)
-                    if not player_data["years_active"]:
-                        continue
+                        # Create player data
+                        years_active = self._extract_years_active(row)
 
-                    # Add to database cache
-                    self.add_player_to_database(
-                        player_id=player_id,
-                        name=full_name,
-                        first_name=player_data["first_name"],
-                        last_name=player_data["last_name"],
-                        birth_year=player_data["birth_year"],
-                        mlb_debut=player_data["mlb_debut"],
-                        years_active=player_data["years_active"]
-                    )
+                        # Include all players with any MLB experience (not just Statcast era)
+                        player_data = {
+                            "id": player_id,
+                            "name": full_name,
+                            "first_name": first_name_db,
+                            "last_name": last_name_db,
+                            "birth_year": row.get('birth_year') if not pd.isna(row.get('birth_year')) else None,
+                            "mlb_debut": row.get('mlb_played_first') if not pd.isna(row.get('mlb_played_first')) else None,
+                            "mlb_last": row.get('mlb_played_last') if not pd.isna(row.get('mlb_played_last')) else None,
+                            "teams": [],  # Will be populated from other sources if needed
+                            "positions": [],  # Will be populated from other sources if needed
+                            "years_active": years_active,
+                            "source": "pybaseball"
+                        }
 
-                    players.append(player_data)
+                        # Add to database cache
+                        self.add_player_to_database(
+                            player_id=player_id,
+                            name=full_name,
+                            first_name=first_name_db,
+                            last_name=last_name_db,
+                            birth_year=player_data["birth_year"],
+                            mlb_debut=player_data["mlb_debut"],
+                            years_active=years_active
+                        )
 
-                # Save updated database
-                self.save_to_cache()
+                        new_players.append(player_data)
 
-                return players
+            except Exception as e:
+                st.warning(f"Search attempt failed for '{last_name}, {first_name}': {str(e)}")
+                continue
 
-        except Exception as e:
-            st.error(f"Error searching MLB database: {str(e)}")
-            return []
+        # Save updated database
+        if new_players:
+            self.save_to_cache()
+
+        return new_players
 
     def _extract_years_active(self, player_row) -> List[int]:
         """Extract years active from player row."""
@@ -308,12 +362,18 @@ class PlayerSearchEngine:
                 end_year = int(last_year) if isinstance(last_year, (int, float, str)) else None
 
                 if start_year and end_year:
-                    # Only include recent years (2008+) for Statcast era
-                    start_year = max(start_year, 2008)
+                    # Include all MLB years, but prioritize recent years for Statcast
                     end_year = min(end_year, datetime.now().year)
 
                     if start_year <= end_year:
-                        years = list(range(start_year, end_year + 1))
+                        # Generate full career range
+                        all_years = list(range(start_year, end_year + 1))
+
+                        # If player has recent activity (2008+), include those years
+                        statcast_years = [y for y in all_years if y >= 2008]
+
+                        # Return Statcast era years if available, otherwise all career years
+                        years = statcast_years if statcast_years else all_years
             except:
                 pass
 
@@ -387,50 +447,83 @@ class PlayerSearchEngine:
         cached_results = self._search_cached_players(name_query, team, position, year_min, year_max, limit)
         all_results.extend(cached_results)
 
-        # If we have a name query and few cached results, search MLB database
-        if name_query and len(cached_results) < 5:
-            live_results = self.search_and_cache_players(name_query)
+        # If we have a name query and found few results, search MLB database
+        if name_query and len(cached_results) < 3:
+            try:
+                live_results = self.search_and_cache_players(name_query)
 
-            # Filter live results by criteria
-            for player in live_results:
-                # Skip if already in cached results
-                if any(r['id'] == player['id'] for r in all_results):
-                    continue
-
-                # Apply filters
-                if team and team not in player.get('teams', []):
-                    continue
-
-                if position and position not in player.get('positions', []):
-                    continue
-
-                if year_min is not None or year_max is not None:
-                    player_years = player.get('years_active', [])
-                    if not player_years:
+                # Filter live results by criteria
+                for player in live_results:
+                    # Skip if already in cached results
+                    if any(r['id'] == player['id'] for r in all_results):
                         continue
 
-                    min_year = min(player_years) if player_years else 9999
-                    max_year = max(player_years) if player_years else 0
-
-                    if year_min is not None and max_year < year_min:
-                        continue
-                    if year_max is not None and min_year > year_max:
+                    # Apply filters
+                    if team and team not in player.get('teams', []):
                         continue
 
-                # Add relevance score
-                if name_query:
-                    player_name = player.get('name', '').lower()
-                    query_lower = name_query.lower()
-                    similarity = SequenceMatcher(None, query_lower, player_name).ratio()
-                    player['relevance_score'] = similarity
-                else:
-                    player['relevance_score'] = 1.0
+                    if position and position not in player.get('positions', []):
+                        continue
 
-                all_results.append(player)
+                    if year_min is not None or year_max is not None:
+                        player_years = player.get('years_active', [])
+                        if player_years:  # Only filter if we have year data
+                            min_year = min(player_years)
+                            max_year = max(player_years)
+
+                            if year_min is not None and max_year < year_min:
+                                continue
+                            if year_max is not None and min_year > year_max:
+                                continue
+
+                    # Add relevance score
+                    if name_query:
+                        player_name = player.get('name', '').lower()
+                        query_lower = name_query.lower()
+                        similarity = SequenceMatcher(None, query_lower, player_name).ratio()
+                        player['relevance_score'] = similarity
+                    else:
+                        player['relevance_score'] = 1.0
+
+                    all_results.append(player)
+
+            except Exception as e:
+                st.warning(f"Live search encountered an error: {str(e)}")
+
+        # If still no results and we have a name query, try a more flexible search
+        if name_query and len(all_results) == 0:
+            # Try searching with partial names or different formats
+            flexible_results = self._flexible_name_search(name_query)
+            all_results.extend(flexible_results)
 
         # Sort by relevance and limit results
         all_results.sort(key=lambda x: x.get('relevance_score', 0), reverse=True)
         return all_results[:limit]
+
+    def _flexible_name_search(self, name_query: str) -> List[Dict]:
+        """Try more flexible search patterns when exact searches fail."""
+        results = []
+
+        # Try searching with just parts of the name
+        parts = name_query.split()
+        if len(parts) > 1:
+            for part in parts:
+                if len(part) >= 3:  # Only search with meaningful parts
+                    try:
+                        partial_results = self.search_and_cache_players(part)
+                        for result in partial_results:
+                            # Check if the result seems relevant to the original query
+                            result_name = result.get('name', '').lower()
+                            query_lower = name_query.lower()
+                            similarity = SequenceMatcher(None, query_lower, result_name).ratio()
+
+                            if similarity >= 0.3:  # Lower threshold for partial matches
+                                result['relevance_score'] = similarity
+                                results.append(result)
+                    except:
+                        continue
+
+        return results
 
     def _search_cached_players(
         self,
@@ -509,10 +602,30 @@ class PlayerSearchEngine:
         Returns:
             List of popular player dictionaries
         """
-        # This would ideally be based on some popularity metric
-        # For now, we'll return recent active players
-        recent_players = self.search_players(year_min=2020, limit=limit)
-        return recent_players
+        all_players = []
+
+        # Get all cached players
+        for player_id, player_data in self.player_db["players"].items():
+            player_copy = player_data.copy()
+            player_copy["id"] = int(player_id)
+            all_players.append(player_copy)
+
+        # If we have few players, return all available
+        if len(all_players) <= limit:
+            return all_players
+
+        # Otherwise, prioritize recent players
+        def get_recent_score(player):
+            years = player.get('years_active', [])
+            if not years:
+                return 0
+            # Score based on most recent year and career length
+            recent_year = max(years)
+            career_length = len(years)
+            return recent_year * 10 + career_length
+
+        all_players.sort(key=get_recent_score, reverse=True)
+        return all_players[:limit]
 
     def get_teams_list(self) -> List[str]:
         """Get list of all teams in database."""
@@ -569,45 +682,8 @@ def get_popular_players_cached(limit: int = 20) -> List[Dict]:
     return engine.get_popular_players(limit)
 
 
-def initialize_with_basic_players():
-    """Initialize search engine with some basic well-known players."""
-    engine = get_search_engine()
-
-    # Add some popular players for testing/demo
-    basic_players = [
-        {
-            "id": 592450,
-            "name": "Aaron Judge",
-            "first_name": "Aaron",
-            "last_name": "Judge",
-            "teams": ["NYY"],
-            "positions": ["RF", "CF"],
-            "years_active": list(range(2016, 2025)),
-        },
-        {
-            "id": 545361,
-            "name": "Mike Trout",
-            "first_name": "Mike",
-            "last_name": "Trout",
-            "teams": ["LAA"],
-            "positions": ["CF"],
-            "years_active": list(range(2011, 2025)),
-        },
-        {
-            "id": 660271,
-            "name": "Ronald Acuña Jr.",
-            "first_name": "Ronald",
-            "last_name": "Acuña Jr.",
-            "teams": ["ATL"],
-            "positions": ["RF", "CF"],
-            "years_active": list(range(2018, 2025)),
-        }
-    ]
-
-    for player in basic_players:
-        # Convert 'id' to 'player_id' for the method call
-        player_data = player.copy()
-        player_data['player_id'] = player_data.pop('id')
-        engine.add_player_to_database(**player_data)
-
-    engine.save_to_cache()
+def initialize_search_engine():
+    """Initialize search engine - now handled automatically in constructor."""
+    # This function is kept for backward compatibility but does nothing
+    # The search engine now initializes itself with popular players
+    pass
